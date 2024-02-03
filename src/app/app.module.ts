@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TrailerInventoryComponent } from './trailer-inventory/trailer-inventory.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TrailerInventoryComponent
   ],
   imports: [
     BrowserModule,
