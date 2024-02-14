@@ -1,0 +1,27 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #1a74a3;
+}
+
+.containerDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+
+}
+
+.containerBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: #3a3a3a;
+  color: #bababa;
+  border: #bababa solid 4px;
+  border-radius: 25px;
+}

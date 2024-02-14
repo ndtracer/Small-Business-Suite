@@ -2,8 +2,17 @@
 
 <h1>Trailer Inventory</h1>
 
+<a routerLink="/trailers/add" class="btn btn-sm btn-success mb-2">Add New Trailer</a>
 <div>
   <h2>Trailers</h2>
+  <p *ngIf="(trailers | json ) == '[]'">There are currently no Trailers</p>
+  <div *ngIf="(trailers | json) !='[]'">
+  <div *ngFor="let trailer of trailers">
+    <button>
+      trailer: {{trailer.trailerID}}
+    </button>
+    </div>
+  </div>
   <div>
 
   </div>
