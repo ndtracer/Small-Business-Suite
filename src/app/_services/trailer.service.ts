@@ -34,7 +34,7 @@ export class TrailerService {
     }
 
     getAllTrailers() {
-      return this.http.get<Trailer[]>(`${environment.apiUrl}/trailers`)
+      return this.http.get<{success: boolean, data: {trailers: Trailer[]}}>(`${environment.apiUrl}/trailers`).pipe(map(response => response.data.trailers))
 
     }
 
