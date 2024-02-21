@@ -1,0 +1,59 @@
+<div class="card">
+  <h4 class="card-header">Register Company</h4>
+  <div class="card-body">
+      <form [formGroup]="form" >
+
+          <div class="mb-3">
+            <label class="form-label">Company Name</label>
+            <input type="text" formControlName="company" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['company'].errors }" />
+            <div *ngIf="submitted && f['company'].errors" class="invalid-feedback">
+                <div *ngIf="f['company'].errors['required'] || f['company'].errors['company']">Please enter a Company name</div>
+            </div>
+        </div>
+          <div class="mb-3">
+            <label class="form-label">Address Line 1 *</label>
+            <input type="text" formControlName="addressLine1" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['addressLine1'].errors}" />
+            <div *ngIf="submitted && f['addressLine1'].errors" class="invalid-feedback">
+              <div *ngIf="f['addressLine1'].errors['required'] || f['addressLine1'].errors['addressLine1']">Please enter an Address</div>
+          </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Address Line 2</label>
+            <input type="text" class="form-control" formControlName="addressLine2">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">City</label>
+            <input type="text" class="form-control" formControlName="city" [ngClass]="{ 'is-invalid': submitted && f['city'].errors}" />
+            <div *ngIf="submitted && f['city'].errors" class="invalid-feedback">
+              <div *ngIf="f['city'].errors['required'] || f['city'].errors['city']">Please enter an Address</div>
+          </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">State</label>
+            <input type="text" class="form-control" formControlName="state" [ngClass]="{ 'is-invalid': submitted && f['state'].errors}" />
+            <div *ngIf="submitted && f['state'].errors" class="invalid-feedback">
+              <div *ngIf="f['state'].errors['required'] || f['state'].errors['state']">Please enter an Address</div>
+          </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Country</label>
+            <input type="text" class="form-control" formControlName="country" [ngClass]="{ 'is-invalid': submitted && f['country'].errors}" />
+            <div *ngIf="submitted && f['country'].errors" class="invalid-feedback">
+              <div *ngIf="f['country'].errors['required'] || f['country'].errors['country']">Please enter an Address</div>
+          </div>
+          </div>
+          <div>
+              <button [disabled]="loading" class="btn btn-primary">
+                  <span *ngIf="loading" class="spinner-border spinner-border-sm me-1"></span>
+                  Register
+              </button>
+              <a routerLink="../login" class="btn btn-link">Cancel</a>
+              <a routerLink="../register-user" class="btn btn-link">next step</a>
+          </div>
+      </form>
+  </div>
+</div>
+
+
+<!-- (ngSubmit)="onSubmit()" -->
+

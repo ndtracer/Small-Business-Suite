@@ -6,7 +6,7 @@ import { first } from 'rxjs/operators';
 import { AccountService, AuthResponseData, AlertService } from '../_services';
 import { Observable } from 'rxjs';
 
-@Component({ templateUrl: 'register.component.html' })
+@Component({ templateUrl: 'register-company.component.html' })
 export class RegisterComponent implements OnInit {
   authObsv: Observable<AuthResponseData>;
   form!: FormGroup;
